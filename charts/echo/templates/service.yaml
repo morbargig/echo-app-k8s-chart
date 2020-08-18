@@ -5,6 +5,7 @@ metadata:
   labels:
     app : {{ .Release.Name }}--app
 spec:
+
   {{- if not .Values.ingress.enabled }}
   # externalTrafficPolicy: Local
   type: {{ .Values.service.type }}
