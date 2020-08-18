@@ -10,13 +10,13 @@ metadata:
 spec:
   releaseName: echo-dev
   chart:
-    git: git@github.com:morbargig/echo-app-k8s-chart
+    git: ssh://git@github.com:morbargig/echo-app-k8s-chart
     path: charts/echo
     ref: dev
   values:
     image:
       repository: us.gcr.io/cloud-285915/newechoapp
-      tag: dev-hdtwcel9
+      tag: ""
     replicaCount: 1
     # app:
     # - port:  3000
