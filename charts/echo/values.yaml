@@ -10,6 +10,11 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.1.0"
 
+
+
+
+mor : jnejknker
+
 mongodburl: mongodb://root:QCo8MLyHmX@mongodb-0.mongodb-headless.default.svc.cluster.local:27017,mongodb-1.mongodb-headless.default.svc.cluster.local:27017,mongodb-2.mongodb-headless.default.svc.cluster.local:27017/admin?authSource=admin&gssapiServiceName=mongodb
 
 app:
