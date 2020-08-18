@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: us.gcr.io/cloud-285915/newechoapp
-      tag: ""
+      tag: std-bsk7r8sd
     replicaCount: 2
     # app:
     # - port:  8080

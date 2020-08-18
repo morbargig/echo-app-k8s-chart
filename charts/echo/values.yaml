@@ -14,12 +14,12 @@ mongodburl: mongodb://root:QCo8MLyHmX@mongodb-0.mongodb-headless.default.svc.clu
 
 app:
   name : echo-app
-  port: 3000
+  port: "3000"
   image: us.gcr.io/cloud-285915/newechoapp
   env:
     port: 
       key: PORT
-      value: {{ .Values.app.port }}
+      value: "3000"
     loglevel: 
       key: LOGLEVEL
       value: info

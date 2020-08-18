@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: us.gcr.io/cloud-285915/newechoapp
-      tag: ""
+      tag: "dev-kdzwicz7"
     replicaCount: 1
     # app:
     # - port:  3000
