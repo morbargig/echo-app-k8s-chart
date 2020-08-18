@@ -5,9 +5,9 @@ metadata:
   labels:
     app : {{ .Release.Name }}--app
 spec:
-  {{- if not .Values.ingress.enabled }}
+  {{- if (not .Values.ingress.enabled) }}
+  type: {{ .Values.service.type  }}
   # externalTrafficPolicy: Local
-  type: {{ .Values.service.type }}
   {{- end }}
   ports:
     - port: {{ .Values.service.port }}
