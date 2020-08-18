@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: morbargig/echo-app # us.gcr.io/cloud-285915/newechoapp
-      tag: "dev-kdzwicz7"
+      tag: "dev-zyse3lqb"
     replicaCount: 1
     # app:
     # - port:  3000
