@@ -6,7 +6,7 @@ metadata:
     app : {{ .Release.Name }}--app
 spec:
   # {{- if (not .Values.ingress.enabled) }}
-  type: {{ .Values.service.type }}
+  # type: {{ .Values.service.type }}
   # externalTrafficPolicy: Local
   # {{- end }}
   ports:
