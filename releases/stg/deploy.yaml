@@ -15,7 +15,7 @@ spec:
     ref: stg
   values:
     image:
-      repository: us.gcr.io/cloud-285915/newechoapp
+      repository: morbargig/echo-app # us.gcr.io/cloud-285915/newechoapp
       tag: std-bsk7r8sd
     replicaCount: 2
     # app:

@@ -23,10 +23,10 @@ spec:
             value : "{{ .value }}"
             {{- end }}
           - name: MONGODBURL
-            valueFrom:
-              secretKeyRef:
-                name: {{ .Values.app.mongodburlsecret }}
-                key: mongodburl
+            # valueFrom:
+            #   secretKeyRef:
+            #     name: {{ .Values.app.mongodburlsecret }}
+            #     key: mongodburl
           ports:
            - containerPort: {{ .Values.app.port }}
           command: 

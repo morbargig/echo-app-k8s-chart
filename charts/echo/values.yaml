@@ -5,17 +5,17 @@
 replicaCount: 1
 
 image:
-  repository: us.gcr.io/cloud-285915/newechoapp
+  repository: morbargig/echo-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "dev-x3oze1nu"
 
 mongodburl: mongodb://root:QCo8MLyHmX@mongodb-0.mongodb-headless.default.svc.cluster.local:27017,mongodb-1.mongodb-headless.default.svc.cluster.local:27017,mongodb-2.mongodb-headless.default.svc.cluster.local:27017/admin?authSource=admin&gssapiServiceName=mongodb
 
 app:
   name : echo-app
   port: "3000"
-  image: us.gcr.io/cloud-285915/newechoapp
+  image: morbargig/echo-app # us.gcr.io/cloud-285915/newechoapp
   env:
     port: 
       key: PORT
