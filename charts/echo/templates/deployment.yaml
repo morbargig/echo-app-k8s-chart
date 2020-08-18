@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.app.name }}
+  name: {{ .Release.Name }}--pod
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      app: {{ .Values.app.name }}
+      app: {{ .Release.Name }}--app
   template:
     metadata:
       labels:
-        app: {{ .Values.app.name }}
+        app: {{ .Release.Name }}--app
     spec:
       containers:
-        - name: {{ .Values.app.name }}
+        - name: {{ .Release.Name }}--app
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           env:
             {{- range .Values.app.env }}
