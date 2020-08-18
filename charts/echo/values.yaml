@@ -14,18 +14,18 @@ mongodburl: mongodb://root:QCo8MLyHmX@mongodb-0.mongodb-headless.default.svc.clu
 
 app:
   name : echo-app
-  port: "3000"
+  port: 3000
   image: us.gcr.io/cloud-285915/newechoapp
   env:
     port: 
       key: PORT
-      value: "3000"
+      value: 3000
     loglevel: 
       key: LOGLEVEL
       value: info
     persist: 
       key: PERSIST
-      value: false
+      value: null
     mongodburl: 
       key: MONGODBURL
       value: null
@@ -33,6 +33,7 @@ app:
       key: DBNAME
       value: echo
   mongodburlsecret: mongo--secret
+  # command: [sleep, 1000]
   command: [npm, start]
         
 
@@ -40,7 +41,7 @@ service:
   name: load-blancer
   type: LoadBalancer
   port: 3000
-  targetPort: 3000
+  targetPort: 80
 
 
 ingress:

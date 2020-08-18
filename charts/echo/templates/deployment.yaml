@@ -21,7 +21,7 @@ spec:
             {{- range .Values.app.env }}
           - name: "{{ .key  }}" #| upper
             value : "{{ .value }}"
-            {{- end }}
+            {{- end }}    
           - name: MONGODBURL
             valueFrom:
               secretKeyRef:

@@ -15,8 +15,8 @@ spec:
     ref: dev
   values:
     image:
-      repository: morbargig/echo-app # us.gcr.io/cloud-285915/newechoapp
-      tag: "0.1.0"
+      repository: us.gcr.io/cloud-285915/newechoapp # us.gcr.io/cloud-285915/newechoapp
+      tag: "dev-0.1.0"
     replicaCount: 1
     # app:
     # - port:  3000
