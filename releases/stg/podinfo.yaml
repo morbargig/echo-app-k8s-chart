@@ -1,0 +1,26 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: echo-rc
+  namespace: stg
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:stg-*
+spec:
+  releaseName: echo-rc
+  chart:
+    git: git@github.com:fluxcd/morbargig/echo-app-k8s-chart
+    path: charts/echo
+    ref: stg
+  values:
+    image:
+      repository: morbargig/echo-app-k8s-chart
+      tag: stg-9ij63o4c
+    replicaCount: 2
+    # app:
+    # - port:  8080
+    # service: 
+    # - targetPort: 8080
+    #   port: 8080
+
