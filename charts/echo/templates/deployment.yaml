@@ -8,8 +8,6 @@ spec:
 {{- end }}
   selector:
     matchLabels:
-
-    
       app: {{ .Release.Name }}--app
   template:
     metadata:
