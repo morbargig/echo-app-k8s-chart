@@ -15,13 +15,8 @@ spec:
     ref: dev
   values:
     image:
-<<<<<<< HEAD
       repository: morbargig/echo-app # us.gcr.io/cloud-285915/newechoapp
       tag: "dev-kdzwicz7"
-=======
-      repository: us.gcr.io/cloud-285915/newechoapp
-      tag: "dev-goojxbw7"
->>>>>>> 6f686a9b26f0a0eb7de3b9230f29ca1e41bdcd69
     replicaCount: 1
     # app:
     # - port:  3000
