@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled sorted 
+8a17718988436b1df898120b89ece775e04c21d2 refs/heads/dev
+8aba3d9d756f2320aa8178b2e7a45accf17a4f35 refs/heads/master
+8132e8c81e57c2ee1fe14c9d333f9ec1e47e2bef refs/notes/flux
+f8c0ab31c029e4de24e40cca0423b9c98c01b327 refs/pull/1/head
+4a4682542b45736d162cd2c27b4db710a7b04a17 refs/tags/flux
+^f5642967bb6737b6910f46a55fc738d4a415e039
+8e777243ea8e954fd76b105b89df9c40f23d01f2 refs/tags/flux-sync
+^8aba3d9d756f2320aa8178b2e7a45accf17a4f35
