@@ -41,7 +41,7 @@ service:
   name: load-blancer
   type: LoadBalancer
   port: 3000
-  targetPort: 80
+  targetPort: 8080
 
 
 ingress:
