@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: echo-rc
   chart:
-    git: ssh://git@github.com:morbargig/echo-app-k8s-chart
+    git: git@github.com:morbargig/echo-app-k8s-chart
     path: charts/echo
     ref: stg
   values:
