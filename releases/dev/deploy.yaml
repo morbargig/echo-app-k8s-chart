@@ -1,0 +1,24 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: echo-dev
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:dev-*
+spec:
+  releaseName: echo-dev
+  chart:
+    git: git@github.com:morbargig/echo-app-k8s-chart
+    path: charts/echo
+    ref: dev
+  values:
+    image:
+      repository: us.gcr.io/cloud-285915/newechoapp # us.gcr.io/cloud-285915/newechoapp
+      tag: "dev-0.1.0"
+    replicaCount: 1
+    app:
+    - port:  3000
+    service: 
+    - targetPort: 3000

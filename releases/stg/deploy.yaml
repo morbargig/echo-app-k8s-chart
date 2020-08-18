@@ -1,0 +1,26 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: echo-rc
+  namespace: stg
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:stg-*
+spec:
+  releaseName: echo-rc
+  chart:
+    git: git@github.com:morbargig/echo-app-k8s-chart
+    path: charts/echo
+    ref: stg
+  values:
+    image:
+      repository: us.gcr.io/cloud-285915/newechoapp # us.gcr.io/cloud-285915/newechoapp
+      tag: stg-0.1.0
+    replicaCount: 2
+    # app:
+    # - port:  8080
+    # service: 
+    # - targetPort: 8080
+    #   port: 8080
+

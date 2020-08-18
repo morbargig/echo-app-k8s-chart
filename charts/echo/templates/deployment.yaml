@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}
+spec:
+{{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}
+    spec:
+      containers:
+        - name: {{ .Values.app.name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+            {{- range .Values.app.env }}
+          - name: "{{ .key  }}" #| upper
+            value : "{{ .value }}"
+            {{- end }}    
+          - name: MONGODBURL
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.app.mongodburlsecret }}
+                key: mongodburl
+          ports:
+           - containerPort: {{ .Values.app.port }}
+          command: 
+          {{- range .Values.app.command }} 
+          - "{{ . }}" 
+          {{- end }}
+
