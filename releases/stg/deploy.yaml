@@ -10,13 +10,13 @@ metadata:
 spec:
   releaseName: echo-rc
   chart:
-    git: git@github.com:morbargig/echo-app-k8s-chart
+    git: ssh://git@github.com:morbargig/echo-app-k8s-chart
     path: charts/echo
     ref: stg
   values:
     image:
       repository: morbargig/echo-app # us.gcr.io/cloud-285915/newechoapp
-      tag: std-bsk7r8sd
+      tag: 0.1.0
     replicaCount: 2
     # app:
     # - port:  8080

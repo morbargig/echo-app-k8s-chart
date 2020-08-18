@@ -1,9 +1,5 @@
 FROM mhart/alpine-node:12
-
 # LABEL maintainer="morbargig@gmail.com"
-
 WORKDIR /app
-
-ADD . ../../../echo-app
-
+COPY ../../../echo-app /app 
 RUN npm install
