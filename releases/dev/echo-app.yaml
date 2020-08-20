@@ -17,7 +17,7 @@ spec:
     image:
       repository: docker.io/morbargig/echo 
       # us.gcr.io/cloud-285915/newechoapp
-      tag: "dev-0.1.0"
+      tag: "dev-0.1.2"
     # replicaCount: 1
     # app:
     #   port:  3000
