@@ -19,8 +19,10 @@ spec:
       # us.gcr.io/cloud-285915/newechoapp
       tag: 0.1.0
     replicaCount: 3
-    app:
-      port:  3000
-    service: 
-      targetPort: 3000
-      port: 80
+    ingress:
+      enabled: true
+    # app:
+    #   port:  3000
+    # service: 
+    #   targetPort: 3000
+    #   port: 80

@@ -4,6 +4,8 @@
 
 replicaCount: 2
 
+
+email: morbargig@gmail.com
 image:
   repository: morbargig/echo 
   # us.gcr.io/cloud-285915/newechoapp 
@@ -54,7 +56,7 @@ ingress:
     - host: morbargig.giize.com
       paths: [backend]
   tls: 
-    - secretName: echo-tlsy
+    - secretName: echo-tls
     - hosts:
       - morbargig.giize.com
 
