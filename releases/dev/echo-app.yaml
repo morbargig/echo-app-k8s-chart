@@ -15,11 +15,11 @@ spec:
     ref: master
   values:
     image:
-      repository: docker.io/morbargig/echo-app 
+      repository: docker.io/morbargig/echo-app
       # us.gcr.io/cloud-285915/newechoapp
-      tag: "dev-0.1.0"
+      tag: "dev-0.1.1"
     replicaCount: 1
     app:
-      port:  3000
-    service: 
+      port: 3000
+    service:
       targetPort: 3000
