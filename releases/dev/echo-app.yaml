@@ -18,8 +18,8 @@ spec:
       repository: morbargig/echo 
       # us.gcr.io/cloud-285915/newechoapp
       tag: "dev-0.1.0"
-  #   replicaCount: 1
-  #   app:
-  #   - port:  3000
-  #   service: 
-  #   - targetPort: 3000
+    # replicaCount: 1
+    # app:
+    #   port:  3000
+    # service: 
+    #   targetPort: 3000
