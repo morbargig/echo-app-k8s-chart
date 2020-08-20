@@ -15,7 +15,7 @@ spec:
     ref: master
   values:
     image:
-      repository: morbargig/echo-app
+      repository: docker.io/morbargig/echo-app 
       # us.gcr.io/cloud-285915/newechoapp
       tag: "dev-0.1.2"
     # replicaCount: 1
