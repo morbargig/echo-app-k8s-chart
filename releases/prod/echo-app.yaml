@@ -21,6 +21,6 @@ spec:
     replicaCount: 3
     app:
     - port:  3000
-    service: 
-    - targetPort: 3000
-      port: 80
+    # service: 
+    # - targetPort: 3000
+    #   port: 80
