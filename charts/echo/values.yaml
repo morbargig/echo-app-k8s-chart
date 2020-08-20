@@ -5,17 +5,18 @@
 replicaCount: 2
 
 image:
-  repository: us.gcr.io/cloud-285915/newechoapp
+  repository: morbargig/echo 
+  # us.gcr.io/cloud-285915/newechoapp 
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.1.0"
-
 mongodburl: mongodb://root:QCo8MLyHmX@mongodb-0.mongodb-headless.default.svc.cluster.local:27017,mongodb-1.mongodb-headless.default.svc.cluster.local:27017,mongodb-2.mongodb-headless.default.svc.cluster.local:27017/admin?authSource=admin&gssapiServiceName=mongodb
 
 app:
   name : echo-app
   port: 3000
-  image: us.gcr.io/cloud-285915/newechoapp
+  image: morbargig/echo 
+  # us.gcr.io/cloud-285915/newechoapp
   env:
     port: 
       key: PORT
@@ -32,7 +33,7 @@ app:
     dbname: 
       key: DBNAME
       value: echo
-  mongodburlsecret: mongo--secret
+  mongodburlsecret: mongo--secret 
   # command: [sleep, 1000]
   command: [npm, start]
         
@@ -45,8 +46,6 @@ service:
 
 
 ingress:
-
-
   enabled: false
   annotations: 
     kubernetes.io/ingress.class: nginx

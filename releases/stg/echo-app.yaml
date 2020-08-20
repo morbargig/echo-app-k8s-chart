@@ -12,10 +12,11 @@ spec:
   chart:
     git: git@github.com:morbargig/echo-app-k8s-chart
     path: charts/echo
-    ref: stg
+    ref: master
   values:
     image:
-      repository: us.gcr.io/cloud-285915/newechoapp # us.gcr.io/cloud-285915/newechoapp
+      repository: morbargig/echo
+      # us.gcr.io/cloud-285915/newechoapp
       tag: stg-0.1.0
     replicaCount: 2
     # app:
