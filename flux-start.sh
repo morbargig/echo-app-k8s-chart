@@ -11,6 +11,7 @@ helm upgrade -i flux fluxcd/flux --wait \
 --namespace fluxcd \
 --set git.url=git@github.com:$MYUSERNAME/$MYREPONAME
 
+
 helm upgrade -i echo-app fluxcd/helm-operator --wait \
 --namespace fluxcd \
 --set git.ssh.secretName=flux-git-deploy \
