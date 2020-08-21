@@ -28,7 +28,7 @@ app:
       value: info
     persist: 
       key: PERSIST
-      value: null
+      value: false
     mongodburl: 
       key: MONGODBURL
       value: null
@@ -55,6 +55,8 @@ ingress:
   hosts:
     - host: morbargig.giize.com
       paths: [backend]
+      serviceName: load-blancer
+      servicePort: 8080
   tls: 
     - secretName: echo-tls
     - hosts:

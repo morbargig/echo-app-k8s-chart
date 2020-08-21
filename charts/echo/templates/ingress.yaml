@@ -24,7 +24,41 @@ spec:
         paths:
           - path: {{ . }}
             backend:
-              serviceName: {{ .Values.service.name }}
-              servicePort: {{ .Values.service.port }}
+              serviceName: {{ .serviceName }}
+              servicePort: {{ .servicePort }}
     {{- end }}
 {{- end }}
+
+
+
+# {{- if (.Values.ingress) -}}
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   annotations:
+#     kubernetes.io/ingress.class: nginx
+#     nginx.org/mergeable-ingress-type: "minion"
+#     # {{- if (.Values.encrypt) }}
+#     # cert-manager.io/cluster-issuer: "letsencrypt-prod"
+#     # {{- end }}
+#   name: {{ .Release.Name }}-ingress
+# spec:
+#   # {{- if (.Values.encrypt) }}
+#   # tls:
+#   #   - hosts: 
+#   #     - {{ .Values.host }}
+#   #     secretName: {{ .Release.Name }}-echoapp.cert
+#   # {{- end }}
+#   rules: 
+#     {{- if (.Values.prefix) }}
+    # - host: "{{ .Values.prefix }}.{{ .Values.host }}"
+#     {{- else }}
+#     - host: {{ .Values.host }}
+#     {{- end }}
+#       http:
+#         paths:
+#           - path: /
+#             backend:
+#               serviceName: {{ .Release.Name }}-node
+#               servicePort: {{ .Values.servicePort }}
+# {{- end -}}
